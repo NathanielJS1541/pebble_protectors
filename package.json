@@ -1,0 +1,46 @@
+{
+    "name": "template-vue-ts",
+    "description": "A Phaser 3 TypeScript project template that demonstrates Vue communication and uses Vite for bundling.",
+    "version": "1.1.2",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/phaserjs/template-vue-ts.git"
+    },
+    "author": "Phaser Studio <support@phaser.io> (https://phaser.io/)",
+    "license": "MIT",
+    "licenseUrl": "http://www.opensource.org/licenses/mit-license.php",
+    "bugs": {
+        "url": "https://github.com/phaserjs/template-vue-ts/issues"
+    },
+    "homepage": "https://github.com/phaserjs/template-vue-ts#readme",
+    "keywords": [
+        "phaser",
+        "phaser3",
+        "typescript",
+        "vue",
+        "vite"
+    ],
+    "scripts": {
+        "dev": "vite --config vite/config.dev.mjs",
+        "build": "vite build --config vite/config.prod.mjs"
+    },
+    "dependencies": {
+        "phaser": "^3.80.1",
+        "vue": "^3.4.20"
+    },
+    "devDependencies": {
+        "@rushstack/eslint-patch": "^1.7.2",
+        "@tsconfig/node20": "^20.1.2",
+        "@types/node": "^20.11.20",
+        "@vitejs/plugin-vue": "^5.0.4",
+        "@vue/eslint-config-typescript": "^12.0.0",
+        "@vue/tsconfig": "^0.5.1",
+        "eslint": "^8.57.0",
+        "eslint-plugin-vue": "^9.22.0",
+        "npm-run-all2": "^6.1.2",
+        "terser": "^5.28.1",
+        "typescript": "~5.3.3",
+        "vite": "^5.1.4",
+        "vue-tsc": "^1.8.27"
+    }
+}
