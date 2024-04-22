@@ -1,0 +1,20 @@
+textarea[name=TerminalHistory] {
+    width: 1500px;
+    height: 1000px;
+}
+
+.Content {
+    resize: none;
+    max-width: 75vw;
+    max-height: 75vh;
+}
+
+div.ContentDiv {
+    margin: auto;
+    display:flex;
+    width: 1500px;
+    height: 1500px;
+    max-width: 75vw;
+    max-height: 75vh;
+    flex-direction: column;
+}
