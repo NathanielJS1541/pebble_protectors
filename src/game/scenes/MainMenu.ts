@@ -29,15 +29,20 @@ export class MainMenu extends Scene
         EventBus.emit('current-scene-ready', this);
     }
     
-    changeScene ()
+    changeScene (scene)
     {
+        console.log("Scene", scene)
         if (this.logoTween)
         {
             this.logoTween.stop();
             this.logoTween = null;
         }
 
-        this.scene.start('Game');
+        if (scene) {
+            this.scene.start(scene);
+        } else {
+            this.scene.start('Game');
+        }
     }
 
     moveLogo (vueCallback: ({ x, y }: { x: number, y: number }) => void)
