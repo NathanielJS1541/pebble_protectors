@@ -4,6 +4,12 @@ import { Game as MainGame } from './scenes/Game';
 import { MainMenu } from './scenes/MainMenu';
 import { AUTO, Game } from 'phaser';
 import { Preloader } from './scenes/Preloader';
+import { DomScene } from './scenes/DomScene';
+import { KittyScene } from './scenes/KittyScene';
+import { AedanScene } from './scenes/AedanScene';
+import { NikaScene } from './scenes/NikaScene';
+import { NatScene } from './scenes/NatScene';
+import { AlecScene } from './scenes/AlecScene';
 
 //  Find out more information about the Game Config at:
 //  https://newdocs.phaser.io/docs/3.70.0/Phaser.Types.Core.GameConfig
@@ -18,7 +24,13 @@ const config: Phaser.Types.Core.GameConfig = {
         Preloader,
         MainMenu,
         MainGame,
-        GameOver
+        GameOver,
+        DomScene,
+        KittyScene,
+        AedanScene,
+        NikaScene,
+        NatScene,
+        AlecScene
     ]
 };
 
