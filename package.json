@@ -1,0 +1,52 @@
+{
+    "name": "pebble_protectors",
+    "description": "A FOSS version of the Rock Defenders cybersecurity game written in TypeScript using the phaser framework.",
+    "version": "0.0.1",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/NathanielJS1541/PebbleProtectors.git"
+    },
+    "author": "Nathaniel Struselis <Nathaniel.Struselis@hotmail.co.uk> (https://github.com/NathanielJS1541)",
+    "contributors": [
+        "Aedan McHale <aedan.mchale@gmail.com> (https://github.com/AedanM)",
+        "Alex Wu (https://github.com/alexx818)",
+        "Dominic Mason (https://github.com/dominicmason555)",
+        "Kitty Farren (https://github.com/kitblafar)"
+    ],
+    "license": "AGPL-3.0-only",
+    "licenseUrl": "https://www.gnu.org/licenses/agpl-3.0.txt",
+    "bugs": {
+        "url": "https://github.com/NathanielJS1541/PebbleProtectors/issues"
+    },
+    "homepage": "https://github.com/NathanielJS1541/PebbleProtectors#readme",
+    "keywords": [
+        "cybersecurity",
+        "education",
+        "game",
+        "phasor",
+        "vue"
+    ],
+    "scripts": {
+        "dev": "vite --config vite/config.dev.mjs",
+        "build": "vite build --config vite/config.prod.mjs"
+    },
+    "dependencies": {
+        "phaser": "^3.80.1",
+        "vue": "^3.4.20"
+    },
+    "devDependencies": {
+        "@rushstack/eslint-patch": "^1.7.2",
+        "@tsconfig/node20": "^20.1.2",
+        "@types/node": "^20.11.20",
+        "@vitejs/plugin-vue": "^5.0.4",
+        "@vue/eslint-config-typescript": "^12.0.0",
+        "@vue/tsconfig": "^0.5.1",
+        "eslint": "^8.57.0",
+        "eslint-plugin-vue": "^9.22.0",
+        "npm-run-all2": "^6.1.2",
+        "terser": "^5.28.1",
+        "typescript": "~5.3.3",
+        "vite": "^5.1.4",
+        "vue-tsc": "^1.8.27"
+    }
+}
