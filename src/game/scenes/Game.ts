@@ -29,8 +29,12 @@ export class Game extends Scene
         EventBus.emit('current-scene-ready', this);
     }
 
-    changeScene ()
+    changeScene (scene)
     {
-        this.scene.start('GameOver');
+        if (scene) {
+            this.scene.start(scene);
+        } else {
+            this.scene.start('GameOver');
+        }
     }
 }
