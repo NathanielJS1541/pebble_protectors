@@ -6,7 +6,10 @@ export class MainMenu extends Scene
 {
     background: GameObjects.Image;
     logo: GameObjects.Image;
-    title: GameObjects.Text;
+    doms_label: GameObjects.Text;
+    kittys_label: GameObjects.Text;
+    aedans_label: GameObjects.Text;
+    nikas_label: GameObjects.Text;
     logoTween: Phaser.Tweens.Tween | null;
 
     constructor ()
@@ -16,12 +19,30 @@ export class MainMenu extends Scene
 
     create ()
     {
-        this.background = this.add.image(512, 384, 'background');
+        this.background = this.add.image(512, 384, 'island');
 
-        this.logo = this.add.image(512, 300, 'logo').setDepth(100);
+        this.logo = this.add.image(512, 300, 'logo').setDepth(100).setAlpha(0);
 
-        this.title = this.add.text(512, 460, 'Main Menu', {
-            fontFamily: 'Arial Black', fontSize: 38, color: '#ffffff',
+        this.doms_label = this.add.text(220, 380, "Dom's Scene", {
+            fontFamily: 'Arial Black', fontSize: 26, color: '#ffffff',
+            stroke: '#000000', strokeThickness: 8,
+            align: 'center'
+        }).setOrigin(0.5).setDepth(100);
+
+        this.kittys_label = this.add.text(440, 300, "Kitty's Scene", {
+            fontFamily: 'Arial Black', fontSize: 26, color: '#ffffff',
+            stroke: '#000000', strokeThickness: 8,
+            align: 'center'
+        }).setOrigin(0.5).setDepth(100);
+
+        this.aedans_label = this.add.text(730, 250, "Aedan's Scene", {
+            fontFamily: 'Arial Black', fontSize: 26, color: '#ffffff',
+            stroke: '#000000', strokeThickness: 8,
+            align: 'center'
+        }).setOrigin(0.5).setDepth(100);
+
+        this.nikas_label = this.add.text(610, 450, "Nika's Scene", {
+            fontFamily: 'Arial Black', fontSize: 26, color: '#ffffff',
             stroke: '#000000', strokeThickness: 8,
             align: 'center'
         }).setOrigin(0.5).setDepth(100);
