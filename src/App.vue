@@ -79,7 +79,7 @@ const currentScene = (scene: MainMenu) => {
     <PhaserGame ref="phaserRef" @current-active-scene="currentScene" />
     <div>
         <div>
-            <button class="button" @click="changeScene()">Cycle Scene</button>
+            <button class="button" @click="changeScene('MainMenu')">Main Menu</button>
         </div>
         <div>
             <button class="button" @click="changeScene('DomScene')">Dom's Scene</button>
