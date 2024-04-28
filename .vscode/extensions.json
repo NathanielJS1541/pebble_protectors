@@ -2,6 +2,7 @@
   "recommendations": [
     "Vue.volar",
     "dbaeumer.vscode-eslint",
-    "yzhang.markdown-all-in-one"
+    "yzhang.markdown-all-in-one",
+    "vscode-icons-team.vscode-icons"
   ]
 }
