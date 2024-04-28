@@ -3,6 +3,9 @@
     "Vue.volar",
     "dbaeumer.vscode-eslint",
     "yzhang.markdown-all-in-one",
-    "vscode-icons-team.vscode-icons"
+    "vscode-icons-team.vscode-icons",
+    "donjayamanne.githistory",
+    "GitHub.vscode-pull-request-github",
+    "mhutchie.git-graph"
   ]
 }
