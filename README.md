@@ -1,4 +1,4 @@
-# PebbleProtectors
+# pebble_protectors
 
 A FOSS version of the [Rock Defenders](https://cybergamesuk.com/rock-defenders) cybersecurity game written in TypeScript using the [phaser](https://github.com/phaserjs/phaser) framework.
 
@@ -13,7 +13,7 @@ A FOSS version of the [Rock Defenders](https://cybergamesuk.com/rock-defenders) 
 ## Project Structure
 
 ```text
-PebbleProtectors/             - Root directory for the project.
+pebble_protectors/            - Root directory for the project.
 ├── docs/                     - Documentation home for the project.
 │   ├── images/               - Images used throughout MarkDown documentation should be stored here.
 │   └── Contributing_Guide.md - A full guide on how to start contributing to the project.
@@ -42,7 +42,7 @@ PebbleProtectors/             - Root directory for the project.
 ├── .eslintrc.cjs             - Shared project ESLint configuration (https://eslint.org/docs/latest/use/configure/configuration-files).
 ├── env.d.ts
 ├── index.html                - A basic HTML page to contain the game.
-├── LICENSE                   - PebbleProtectors license.
+├── LICENSE                   - pebble_protectors license.
 ├── package-lock.json         - NPM manifest.
 ├── package.json              - NPM package information.
 ├── README.md                 - Main project README (you are here!).
@@ -57,7 +57,7 @@ To start contributing, please see the [Contributing_Guide.md](./docs/Contributin
 
 ## Concept Art
 
-![PebbleProtectors Concept Art](./Docs/Images/PebbleProtectors_Concept.png)
+![pebble_protectors Concept Art](./docs/images/pebble_protectors_concept.png)
 
 ## License
 
