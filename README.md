@@ -1,5 +1,7 @@
 # PebbleProtectors
 
+![Pebble Protectors Logo](./docs/images/pebble.png)
+
 A FOSS version of the [Rock Defenders](https://cybergamesuk.com/rock-defenders) cybersecurity game written in TypeScript using the [phaser](https://github.com/phaserjs/phaser) framework.
 
 <!-- omit from toc -->
