@@ -4,7 +4,7 @@
     "version": "0.0.1",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/NathanielJS1541/pebble_protectors.git"
+        "url": "git+https://github.com/NathanielJS1541/PebbleProtectors.git"
     },
     "author": "Nathaniel Struselis <Nathaniel.Struselis@hotmail.co.uk> (https://github.com/NathanielJS1541)",
     "contributors": [
@@ -17,9 +17,9 @@
     "license": "AGPL-3.0-only",
     "licenseUrl": "https://www.gnu.org/licenses/agpl-3.0.txt",
     "bugs": {
-        "url": "https://github.com/NathanielJS1541/pebble_protectors/issues"
+        "url": "https://github.com/NathanielJS1541/PebbleProtectors/issues"
     },
-    "homepage": "https://github.com/NathanielJS1541/pebble_protectors#readme",
+    "homepage": "https://github.com/NathanielJS1541/PebbleProtectors#readme",
     "keywords": [
         "cybersecurity",
         "education",
