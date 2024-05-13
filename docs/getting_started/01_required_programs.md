@@ -109,7 +109,7 @@ Regardless of client, when you pick a folder to "clone" the repo into, a folder 
 1. Open GitHub Desktop. You should be greeted with a screen like this:  
    ![GitHub Desktop Home Screen](../images/GitHub_Desktop_Home_Screen.png)
 2. (Optional) If you have a GitHub account, you can sign in by clicking `File -> Options -> Accounts -> Sign In`.
-3. Click "Clone a repository from the internet"
+3. Click "Clone a repository from the internet".
 4. Click the "URL" tab.
 5. Paste `https://github.com/NathanielJS1541/pebble_protectors.git` into the "Repository URL".
 6. Click "Choose" to pick a folder to clone the repo to.
@@ -125,7 +125,9 @@ Assuming that you have VSCode installed, open it. If you don't, see the [VSCode 
    ![VSCode clone git repo](../images/VSCode_Clone_Git_Repo.png)
 2. Paste the repo url (`https://github.com/NathanielJS1541/pebble_protectors.git`) into the URL box and press enter:  
    ![VSCode clone from URL](../images/VSCode_Clone_From_URL.png)  
-   ![VSCode clone pebble_protectors](../images/VSCode_Clone_pebble_protectors.png)
+   ![VSCode clone pebble_protectors](../images/VSCode_Clone_pebble_protectors.png)  
+   Alternatively, if you are signed in to the GitHub extension in VSCode, you may be able to click "Clone from GitHub", then search for the repo instead of pasting the URL:  
+   ![VSCode select repo to clone](../images/GitHub_Desktop_Select_Repo.png)
 3. Choose a folder to clone the repo into. This will create a folder called `pebble_protectors` inside whatever folder you pick!
 4. Click "open" on the following dialog:  
    ![VSCode open cloned repo](../images/VSCode_Open_Cloned_Repo.png)
