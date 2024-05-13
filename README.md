@@ -1,4 +1,4 @@
-# pebble_protectors
+# PebbleProtectors
 
 A FOSS version of the [Rock Defenders](https://cybergamesuk.com/rock-defenders) cybersecurity game written in TypeScript using the [phaser](https://github.com/phaserjs/phaser) framework.
 
@@ -13,7 +13,7 @@ A FOSS version of the [Rock Defenders](https://cybergamesuk.com/rock-defenders) 
 ## Project Structure
 
 ```text
-pebble_protectors/            - Root directory for the project.
+PebbleProtectors/             - Root directory for the project.
 ├── docs/                     - Documentation home for the project.
 │   ├── images/               - Images used throughout MarkDown documentation should be stored here.
 │   └── Contributing_Guide.md - A full guide on how to start contributing to the project.
@@ -42,7 +42,7 @@ pebble_protectors/            - Root directory for the project.
 ├── .eslintrc.cjs             - Shared project ESLint configuration (https://eslint.org/docs/latest/use/configure/configuration-files).
 ├── env.d.ts
 ├── index.html                - A basic HTML page to contain the game.
-├── LICENSE                   - pebble_protectors license.
+├── LICENSE                   - PebbleProtectors license.
 ├── package-lock.json         - NPM manifest.
 ├── package.json              - NPM package information.
 ├── README.md                 - Main project README (you are here!).
@@ -53,11 +53,13 @@ pebble_protectors/            - Root directory for the project.
 
 ## Notes for Developers
 
-To start contributing, please see the [Contributing_Guide.md](./docs/Contributing_Guide.md) to set up your dev environment and get started building the project.
+If you're familliar with tools like `git` and have used the [phaser](https://github.com/phaserjs/phaser) framework before, you can jump straight to the [Contributing_Guidelines.md](./docs/Contributing_Guidelines.md) to get familliar with how this repo is run.
+
+If you're completely new to software development, or perhaps just want a more detailed step-by-step guide, then check out the [Getting Started Walkthrough](./docs/getting_started/README.md). This should be a complete walkthrough from having nothing installed on your computer, to your first commit and pull request.
 
 ## Concept Art
 
-![pebble_protectors Concept Art](./docs/images/pebble_protectors_concept.png)
+![PebbleProtectors Concept Art](./docs/images/pebble_protectors_concept.png)
 
 ## License
 
