@@ -7,6 +7,7 @@ This guide will walk you through the basic functionality of `git`, and by the en
 <!-- omit from toc -->
 ## Contents
 
+- [`git` vs. GitHub](#git-vs-github)
 - [Installing a `git` Client](#installing-a-git-client)
 - [Create a GitHub Account](#create-a-github-account)
 - [Cloning This Repo](#cloning-this-repo)
@@ -32,6 +33,14 @@ This guide will walk you through the basic functionality of `git`, and by the en
     - [Changing `git`'s Default Text Editor](#changing-gits-default-text-editor)
   - [Committing a Change with GitHub Desktop](#committing-a-change-with-github-desktop)
   - [Commiting a Change with VSCode](#commiting-a-change-with-vscode)
+
+## `git` vs. GitHub
+
+When working with `git` repos, a common source of confusion is the difference between `git` and GitHub, which I will try and clarify in this section. If you don't need this, skip straight to [Installing a `git` Client](#installing-a-git-client).
+
+`git` is a version control system. It keeps track of changes made to files within a "repository", and has some convenient ways to work on code within the repository in collaborative projects. It's a lot more advanced than copying an entire folder and adding `-final` or `-final-FINAL` to the name, and has a lot of powerful tools for comparing, merging, and tracking the changes people make to files accross the whole repository.
+
+GitHub, on the other hand, is just a website for hosting `git` repositories online. `git` repositories are very flexible, and you can create them offline and never upload them to hosting sites like GitHub and GitLab. Sites like GitHub add a lot of extra "sugar" to the `git` repository, such as easy management of collaborators, branch rules, pull requests, issues, and wikis.
 
 ## Installing a `git` Client
 
