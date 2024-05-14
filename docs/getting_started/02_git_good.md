@@ -308,6 +308,8 @@ Now we've gone over the basics of staging and what a commit is, let's try it out
 To commit the changes with `git` you can either run `git commit` to open a text editor to enter the commit message in:  
 ![Editing a commit message in Neovim](../images/Neovim_Commit_Message.png)
 
+***Note: If you run `git commit` and you find yourself in a text editor you don't know how to use, `git` probably opened `vi`. To get out of it hit `ESC`, then `:q!`. This will quit `vi` wihtout saving any changes (and abort the commit). See the [section below](#changing-gits-default-text-editor) to change the text editor `git` uses and then try again.***
+
 Or if you have a fairly short commit message, you can type `git commit -m <commit_message>`:  
 
 ```PowerShell
@@ -319,10 +321,6 @@ Or if you have a fairly short commit message, you can type `git commit -m <commi
 However you choose, it's best practice to have an empty line between your "title"/"summary" and "description".
 
 This requires you to have staged changes first!
-
-TODO: This needs to be clearer!
-
-*Note: If you run `git commit` and you find yourself in a text editor you don't know how to use, `git` probably opened `vi`. To get out of it hit `ESC`, then `:q!`. This will quit `vi` wihtout saving any changes. See the [section below](#changing-gits-default-text-editor) to change the text editor `git` uses.*
 
 If you wish to [add a Co-Author to a commit](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors), you can do so by adding thier name and email to the bottom of the commit message, preceded by the text `Co-authored-by:`:
 
