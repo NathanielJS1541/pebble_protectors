@@ -306,7 +306,7 @@ However you choose, it's best practice to have an empty line between your "title
 
 This requires you to have staged changes first!
 
-*Note: If you run `git commit` and you find yourself in a text editor you don't know how to use, `git` probably opened `vi`. To get out of it hit `ESC`, then `:q!`. This will quit `vi` wihtout saving any changes. See the section below to change the text editor `git` uses.*
+*Note: If you run `git commit` and you find yourself in a text editor you don't know how to use, `git` probably opened `vi`. To get out of it hit `ESC`, then `:q!`. This will quit `vi` wihtout saving any changes. See the [section below](#changing-gits-default-text-editor) to change the text editor `git` uses.*
 
 If you wish to [add a Co-Author to a commit](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors), you can do so by adding thier name and email to the bottom of the commit message, preceded by the text `Co-authored-by:`:
 
