@@ -38,7 +38,7 @@ This guide will walk you through the basic functionality of `git`, and by the en
 
 When working with `git` repos, a common source of confusion is the difference between `git` and [GitHub](https://github.com/), which I will try and clarify in this section. If you don't need this, skip straight to [Installing a `git` Client](#installing-a-git-client).
 
-`git` is a version control system. It keeps track of changes made to files within a "repository", and has some convenient ways to work on code within the repository in collaborative projects. It's a lot more advanced than copying an entire folder and adding `-final` or `-final-FINAL` to the name, and has a lot of powerful tools for comparing, merging, and tracking the changes people make to files accross the whole repository.
+`git` is a version control system. It keeps track of changes made to files within a "repository", and has some convenient ways to work on code within the repository in collaborative projects. It's a lot more advanced than copying an entire folder and adding `-version2` or `-version3-final` to the name, and has a lot of powerful tools for comparing, merging, and tracking the changes people make to files accross the whole repository.
 
 [GitHub](https://github.com/), on the other hand, is just a website for hosting `git` repositories online. `git` repositories are very flexible, and you can create them offline and never upload them to hosting sites like [GitHub](https://github.com/) and [GitLab](https://about.gitlab.com/). Sites like [GitHub](https://github.com/) add a lot of extra "sugar" to the `git` repository, such as easy management of collaborators, branch rules, pull requests, issues, and wikis.
 
@@ -89,6 +89,11 @@ To get started with your first changes, we need to "check out" the `dev` branch,
    ![VSCode Checkout dev](../images/VSCode_Checkout_dev.png)
 
 ## Creating a Feature Branch
+
+Branches in `git` are essentially a way of diverging away from the main line of development to complete some work, and then have it "merged" back in with the main line of development at a later date. This could be for a variety of reasons; creating a new feature, testing a proof-of-concept, or just storing and backing up your unfinished work. `git` highly encourages frequent branching.
+
+To try and help demonstrate branches a bit better, here is an example of how a `main` and `dev` branch might be used, with feature branches used for larger collections of changes:  
+![git branch demo](../images/VSCode_Branch_Demo.png)
 
 To contribute code to the repo, it is best to create your own "branch" to work in. [Checking out the `dev` branch](#checking-out-the-dev-branch) was important, since the new branch is now based on the work within `dev`.
 
@@ -314,6 +319,8 @@ Or if you have a fairly short commit message, you can type `git commit -m <commi
 However you choose, it's best practice to have an empty line between your "title"/"summary" and "description".
 
 This requires you to have staged changes first!
+
+TODO: This needs to be clearer!
 
 *Note: If you run `git commit` and you find yourself in a text editor you don't know how to use, `git` probably opened `vi`. To get out of it hit `ESC`, then `:q!`. This will quit `vi` wihtout saving any changes. See the [section below](#changing-gits-default-text-editor) to change the text editor `git` uses.*
 
