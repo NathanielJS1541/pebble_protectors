@@ -2,7 +2,7 @@
 
 This guide will get you started with `git` repositories using a `git` client of your choice. You may be wondering why this isn't grouped with the [Installing Required Programs](./01_required_programs.md) guide, but it just got too long because of the choices in here.
 
-This guide will walk you through the basic functionality of `git`, and by the end of it you will end up creating a pull request to add your name and a scene for yourself to the repo.
+This guide will walk you through the basic functionality of `git`, and by the end of it you will end up creating a pull request to add your name and a level for yourself to the repo.
 
 <!-- omit from toc -->
 ## Contents
@@ -23,6 +23,10 @@ This guide will walk you through the basic functionality of `git`, and by the en
   - [Push a New Branch with GitHub Desktop](#push-a-new-branch-with-github-desktop)
   - [Push a New Branch with VSCode](#push-a-new-branch-with-vscode)
 - [Making a Code Change](#making-a-code-change)
+- [Staging a Change](#staging-a-change)
+  - [Staging a Change with `git`](#staging-a-change-with-git)
+  - [Staging a Change with GitHub Desktop](#staging-a-change-with-github-desktop)
+  - [Staging a Change with VSCode](#staging-a-change-with-vscode)
 - [Committing a Change](#committing-a-change)
   - [Committing a Change with `git`](#committing-a-change-with-git)
 
@@ -141,34 +145,15 @@ As with [GitHub Desktop](#push-a-new-branch-with-github-desktop), VSCode should 
 
 *TODO*
 
-## Committing a Change
+## Staging a Change
 
-In `git`, a "commit" is a record of the changes made to one or more file(s) with a description explaining what the change was for. An example of a commit message would be something like this:
-
-```PowerShell
-commit b962716d7b31d82e2f9ad19fab3306fad55f85ee
-Author: Nathaniel Struselis <nathaniel.struselis@hotmail.co.uk>
-Date:   Mon Apr 22 17:13:00 2024 +0000
-
-    Updated package.json for PebbleProtectors.
-    Maybe we need to rename this repo pebble_protectors?
-```
-
-You can [view this commit online on GitHub](https://github.com/NathanielJS1541/pebble_protectors/commit/b962716d7b31d82e2f9ad19fab3306fad55f85ee), if you wish.
-
-The commit ID (`b962716d7b31d82e2f9ad19fab3306fad55f85ee`, or `b962716d` for short) is a unique identifier for this particular commit in this repo.
-
-The author is the name and email of the person that authored the commit (created it locally). This can (very occasionally) be different to the committer if the commit has been cherry-picked or rebased.
-
-The date is simply the date at which the commit was authored.
-
-The text following the date is the commit message. The first line of the commit message, `Updated package.json for PebbleProtectors.`, will be shown as the "title" or "preview" for the commit on GitHub, and should contain enough information to understand what the commit is trying to achieve. The rest of the commit message (which can be much longer than a single line) contains additional detail that may be helpful to reviewers, or people looking at the commit later. Think of the first line as a title, and any following lines as the description.
+With `git`, changes that you make (or newly added files) are just stored on your local machine, and `git` won't interact with them or [commit](#committing-a-change) them. In preparation for a [commit](#committing-a-change), you need to "stage" the changes you wish to commit to tell `git` what to include in the commit.
 
 It is also important to note that `git` will not "track" files automatically when they are newly added to the repo. They must be "staged" and "committed" at least once before they are tracked by `git`.
 
-Now we've gone over the basics of commits, let's try it out by committing the changes from the [Making a Code Change](#making-a-code-change) section to the branch created in the [Creating a Feature Branch](#creating-a-feature-branch) section.
+After [Making a Code Change](#making-a-code-change), we now need to "stage" what we changed in preparation to [commit](#committing-a-change) it.
 
-### Committing a Change with `git`
+### Staging a Change with `git`
 
 Once you've made a change, running `git status` should show you what has changed within the repo:
 
@@ -194,7 +179,9 @@ Here you can see the `docs/my_changed_file.md` has been modified. This file has 
 
 The file `docs/my_new_file.md` is new to the repo, and is currently "untracked".
 
-Both "tracked" and "untracked" files can be "staged" for a commit (in other words, staging means that a particular change is being prepared to be included in the next commit) in the same manner, by using the `git add <file>` command. To stage a single file, run `git add docs/my_new_file.md` for example. To stage all files, run `git add .`. Try staging all of your changes in preparation for a commit.
+Both "tracked" and "untracked" files can be "staged" for a commit in the same manner; by using the `git add <file>` command. To stage a single file, run `git add docs/my_new_file.md` for example. To stage all files, run `git add .`.
+
+Try staging all of your changes in preparation for a commit with `git add .`.
 
 You should now see that the files are "staged" if you run `git status` again:
 
@@ -210,9 +197,9 @@ Changes to be committed:
         new file:   docs/my_new_file.md
 ```
 
-Helpfully, `git` also tells you how to unstage files here. Simply run `git restore --staged <file>`.
+Helpfully, `git` also tells you how to unstage files here. Simply run `git restore --staged <file>`. This will not delete the file! It will simply tell git that you don't actually want to include it in the staging area. It will go back to being "unstaged".
 
-It is worth noting here, that the "Changes to be committed" are "frozen" at the point you staged those files. If you change them now, it will be treated as an "unstaged change":
+It is worth noting here, that the "Changes to be committed" are "frozen" at the point you staged those files. If you change the files again now, it will be treated as an "unstaged change":
 
 ```PowerShell
 > git status
@@ -231,6 +218,74 @@ Changes not staged for commit:
         modified:   docs/my_changed_file.md
 ```
 
+The additional change can be staged like before, or left for a future commit.
+
+### Staging a Change with GitHub Desktop
+
+When you edit files in the repo, you will notice that GitHub Desktop will start showing them under the "Changes" tab. In GitHub Desktop files are staged by default, noted by the tickbox next to the file:  
+![GitHub Desktop Staging a Change](../images/GitHub_Desktop_Stage_Change.png)
+
+If you wish to unstage something, simply untick the box next to the file.
+
+For more advanced cases, you may wish to stage part of a file in one commit, and leave the rest for future commits. In GitHub Desktop, you can do this by clicking the file you wish to stage a section of in the "Changes" tab, and then clicking at the start of the line to stage / unstage the individual line:  
+![GitHub Desktop Staging a Line](../images/GitHub_Desktop_Stage_Line.png)
+
+Highlighting the line indicates it is staged, if it is not highlighted then it is unstaged. In this example Edit 1 and Edit 3 are staged, but Edit 2 is unstaged.
+
+### Staging a Change with VSCode
+
+In the "Source Control" tab of VSCode, changes will begin to appear as files are edited. They can be staged by clicking th `+` symbol when hovering over them:  
+![VSCode Stage A File](../images/VSCode_Stage_File.png)
+
+When the change is staged, it will appear under a new "Staged Changes" heading:  
+![VSCode Staged Change](../images/VSCode_Staged_Change.png)
+
+With lots of changes, this view can get cluttered and it can be hard to keep track of where files are located. To help with this, I recommend changing to the "tree view" within the source control tab:  
+![VSCode Source Control Tree View](../images/VSCode_Source_Control_Tree_View.png)
+
+To stage a section of a file, double click the file in the "Source Control" tab and you will be presented with a diff view. To stage a single or selection of lines, highlight it, right click, and then click "Stage Selected Ranges":  
+![VSCode Stage a Range](../images/VSCode_Stage_Selected_Range.png)
+
+You can do this multiple times within a file, and highlight multiple lines at a time. This will add only the selected sections of the file to the staging area, ready for comitting:  
+![VSCode Staged Ranges](../images/VSCode_Staged_Ranges.png)
+
+If you would like to stage an entire block of code, you can do so from the same view (after clicking a file in the source control tab) by clicking the "stage block" button between the two split windows:  
+![VSCode Stage A Block](../images/VSCode_Stage_A_Block.png)
+
+## Committing a Change
+
+Now we've gone over the basics of staging, let's try it out by committing the changes from the [Making a Code Change](#making-a-code-change) section to the branch created in the [Creating a Feature Branch](#creating-a-feature-branch) section.
+
+In `git`, a "commit" is a record of the changes made to one or more file(s) with a description explaining what the change was for. An example of a commit message would be something like this:
+
+```PowerShell
+commit 6bc0ffe0cd1056ae992f4fa0a8782f0844248140
+Author: Nathaniel Struselis <nathaniel.struselis@hotmail.co.uk>
+Date:   Tue May 14 07:30:40 2024 +0100
+
+    Added WIP git_good guide and relevant images.
+
+    This is not yet finished (far from it!), but so far details
+    - Creating a GitHub account
+    - Checking out the `dev` branch
+    - Creating a new feature branch
+    - Pushing a new branch
+    - Making a code change [Not started]
+    - Committing a change with `git` **[WIP]**
+```
+
+You can [view this commit online on GitHub](https://github.com/NathanielJS1541/pebble_protectors/commit/6bc0ffe0cd1056ae992f4fa0a8782f0844248140), if you wish.
+
+The commit ID (`6bc0ffe0cd1056ae992f4fa0a8782f0844248140`, or `6bc0ffe` for short) is a unique identifier for this particular commit in this repo.
+
+The author is the name and email of the person that authored the commit (created it locally). This can (very occasionally) be different to the committer if the commit has been cherry-picked or rebased.
+
+The date is simply the date at which the commit was authored.
+
+The text following the date is the commit message. The first line of the commit message, `Added WIP git_good guide and relevant images.`, will be shown as the "title" or "preview" for the commit on GitHub, and should contain enough information to understand what the commit is trying to achieve. The rest of the commit message (which can be much longer than a single line) contains additional detail that may be helpful to reviewers, or people looking at the commit later. Think of the first line as a title, and any following lines as the description.
+
+### Committing a Change with `git`
+
 Finally, to commit the changes you can either run `git commit` to open a text editor to enter the commit message in:  
 ![Editing a commit message in Neovim](../images/Neovim_Commit_Message.png)
 
@@ -241,5 +296,3 @@ Or if you have a fairly short commit message, you can type `git commit -m <commi
 [ns_new_scene 080cdd4] Added a new pretend file for demonstration
  1 file changed, 1 insertion(+)
 ```
-
-*TODO: Maybe this needs breaking up into a "staging" section and a "committing" section?*
