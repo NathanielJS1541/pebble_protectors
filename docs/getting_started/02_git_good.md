@@ -29,6 +29,9 @@ This guide will walk you through the basic functionality of `git`, and by the en
   - [Staging a Change with VSCode](#staging-a-change-with-vscode)
 - [Committing a Change](#committing-a-change)
   - [Committing a Change with `git`](#committing-a-change-with-git)
+    - [Changing `git`'s Default Text Editor](#changing-gits-default-text-editor)
+  - [Committing a Change with GitHub Desktop](#committing-a-change-with-github-desktop)
+  - [Commiting a Change with VSCode](#commiting-a-change-with-vscode)
 
 ## Installing a `git` Client
 
@@ -254,8 +257,6 @@ If you would like to stage an entire block of code, you can do so from the same 
 
 ## Committing a Change
 
-Now we've gone over the basics of staging, let's try it out by committing the changes from the [Making a Code Change](#making-a-code-change) section to the branch created in the [Creating a Feature Branch](#creating-a-feature-branch) section.
-
 In `git`, a "commit" is a record of the changes made to one or more file(s) with a description explaining what the change was for. An example of a commit message would be something like this:
 
 ```PowerShell
@@ -274,7 +275,7 @@ Date:   Tue May 14 07:30:40 2024 +0100
     - Committing a change with `git` **[WIP]**
 ```
 
-You can [view this commit online on GitHub](https://github.com/NathanielJS1541/pebble_protectors/commit/6bc0ffe0cd1056ae992f4fa0a8782f0844248140), if you wish.
+You can [view this commit on GitHub](https://github.com/NathanielJS1541/pebble_protectors/commit/6bc0ffe0cd1056ae992f4fa0a8782f0844248140), if you wish.
 
 The commit ID (`6bc0ffe0cd1056ae992f4fa0a8782f0844248140`, or `6bc0ffe` for short) is a unique identifier for this particular commit in this repo.
 
@@ -284,9 +285,13 @@ The date is simply the date at which the commit was authored.
 
 The text following the date is the commit message. The first line of the commit message, `Added WIP git_good guide and relevant images.`, will be shown as the "title" or "preview" for the commit on GitHub, and should contain enough information to understand what the commit is trying to achieve. The rest of the commit message (which can be much longer than a single line) contains additional detail that may be helpful to reviewers, or people looking at the commit later. Think of the first line as a title, and any following lines as the description.
 
+When creating your own commits, try and leave descriptive but concise commit messages with additional descriptions on the line below if necessary. The commit message `changed some things` isn't helping anyone!
+
+Now we've gone over the basics of staging and what a commit is, let's try it out by committing the changes from the [Making a Code Change](#making-a-code-change) section to the branch created in the [Creating a Feature Branch](#creating-a-feature-branch) section. Stage all of the changes you've made as described in the [Staging a Change](#staging-a-change) section for your chosen `git` tool.
+
 ### Committing a Change with `git`
 
-Finally, to commit the changes you can either run `git commit` to open a text editor to enter the commit message in:  
+To commit the changes with `git` you can either run `git commit` to open a text editor to enter the commit message in:  
 ![Editing a commit message in Neovim](../images/Neovim_Commit_Message.png)
 
 Or if you have a fairly short commit message, you can type `git commit -m <commit_message>`:  
@@ -296,3 +301,46 @@ Or if you have a fairly short commit message, you can type `git commit -m <commi
 [ns_new_scene 080cdd4] Added a new pretend file for demonstration
  1 file changed, 1 insertion(+)
 ```
+
+However you choose, it's best practice to have an empty line between your "title"/"summary" and "description".
+
+This requires you to have staged changes first!
+
+*Note: If you run `git commit` and you find yourself in a text editor you don't know how to use, `git` probably opened `vi`. To get out of it hit `ESC`, then `:q!`. This will quit `vi` wihtout saving any changes. See the section below to change the text editor `git` uses.*
+
+If you wish to [add a Co-Author to a commit](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors), you can do so by adding thier name and email to the bottom of the commit message, preceded by the text `Co-authored-by:`:
+
+```PowerShell
+> git commit -m "Adding a test commit with multiple authors.
+>
+> Co-authored-by: NAME <NAME@EXAMPLE.COM>
+> Co-authored-by: ANOTHER-NAME <ANOTHER-NAME@EXAMPLE.COM>"
+```
+
+#### Changing `git`'s Default Text Editor
+
+To change the text editor that `git` uses to something a little friendlier for anyone who doesn't [grok vi](https://stackoverflow.com/a/1220118/3001761), you can simply [configure the core.editor for git](https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Setup-and-Config#ch_core_editor). That link contains an exhaustive list of editors to use with `git`, so you should find one you're familliar with.
+
+For exmaple, to use VSCode type `git config --global core.editor "code --wait"`.
+
+*Note that this is a **global** change!* To make the change for this repo only, omit the `--global` tag: `git config core.editor "code --wait"`.
+
+### Committing a Change with GitHub Desktop
+
+At the bottom of the sidebar in GitHub Desktop, there is a space to fill out a "Summary" and "Description" for the commit:  
+![GitHub Desktop Commit Message](../images/GitHub_Desktop_Commit_Message.png)
+
+Here you can type in a "Summary" which is required, and a longer description if it is needed.
+
+If you worked on changes offline with someone else, you can also add Co-Authors to the commit. Click the highlighted icon and type their GitHub username:  
+![GitHub Desktop Commit Message With Co-Authors](../images/GitHub_Desktop_Commit_Message_With_Co-Authors.png).
+
+Once you are ready, simply click the "Commit" button below the description box.
+
+### Commiting a Change with VSCode
+
+In the source control tab of VSCode, there is a box to enter your commit messages into. You can enter multiple lines, and it's usually best practice to have an empty line between "title"/"summary" and "description":  
+![VSCode Commit Message](../images/VSCode_Commit_Message.png)
+
+If you wish to add Co-Authors to a commit, you can add a new line with the text `Co-authored-by:` to the end of the commit message, and then type their name and email:  
+![VSCode Commit Message With Co-Author](../images/VSCode_Commit_Message_With_Co-Author.png)
