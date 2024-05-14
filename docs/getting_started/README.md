@@ -9,3 +9,4 @@ Since this is a **full** walkthrough, it's been broken into different sections s
 ## Contents
 
 1. [Installing Required Programs](./01_required_programs.md)
+2. [Getting Started With Git](./02_git_good.md)
